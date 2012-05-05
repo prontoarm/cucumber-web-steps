@@ -72,7 +72,7 @@ end
 
 Then /^I should have a cookie called "([^"]*)" with value "([^"]*)"$/ do |name, value|
   puts cookies.inspect
-  cookies["#{name}"].should == value
+  cookies[name.downcase.to_sym].should == value
 end
 
 When /^I wait (\d+) seconds?$/ do |length_of_pause|

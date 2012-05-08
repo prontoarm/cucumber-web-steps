@@ -7,7 +7,7 @@ Fill out forms
 
 <pre>
 When I fill in [field name] with [value]
-Ex: When I fill in "username" with "johndoe"
+  Ex: When I fill in "username" with "johndoe"
 </pre>
 
 Test content
@@ -15,7 +15,7 @@ Test content
 
 <pre>
 Then I should see the text [whatever text you want]
-Ex: Then I should see the text "Successfully logged in!"
+  Ex: Then I should see the text "Successfully logged in!"
 
 Then I should see all of the texts:
   | the first text  |
@@ -31,7 +31,7 @@ Then I should see all of the images:
   | hello.png |
 
 Then I should see a link that points to [value of the "href" attribute]
-Ex: Then I should see a link that points to "http://example.com"
+  Ex: Then I should see a link that points to "http://example.com"
   
 Then I should see a [tag] with [attribute name] of [attribute value]
 Ex: Then I should see a "div" with "id" of "content-container"
@@ -54,9 +54,9 @@ Test navigation
 
 <pre>
 Given I go to [path name]
-Ex: Given I go to the login page
+  Ex: Given I go to the login page
 Then I should be on [path name]
-Ex: Then I should be on the new user page
+  Ex: Then I should be on the new user page
 </pre>
 
 Other

@@ -63,6 +63,8 @@ Other
 -----
 
 <pre>
+Given pending
+  Marks an entire scenario as pending.
 When I wait 3 seconds
   Pause the web driver for the specified number of seconds. For example, you want to test AJAX which fires after 500 milliseconds, have the web driver wait 1 second.
 Then debug

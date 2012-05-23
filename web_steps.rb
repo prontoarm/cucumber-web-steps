@@ -37,6 +37,16 @@ Then /^I should see all of the images:?$/ do |table|
   end
 end
 
+Then /^I should see the HTML5 audio source "([^"]*)"$/ do |audio_name|
+  page.should have_xpath("//audio[contains(@src, \"#{audio_name}\")] | //audio/source[contains(@src, \"#{audio_name}\")]")
+end
+
+Then /^I should see all of the HTML5 audio sources:?$/ do |table|
+  table.raw.each do |text|
+    step "I should see the HTML5 audio source \"#{text[0]}\""
+  end
+end
+
 Then /^I should see a link that points to "([^"]*)"$/ do |href_destination|
   page.should have_xpath("//a[@href='#{href_destination}']")
 end

@@ -30,6 +30,12 @@ Then I should see all of the images:
   | about.png |
   | hello.png |
 
+Then I should see the HTML5 audio source "music.mp3"
+Then I should see all of the HTML5 audio sources:
+  | track_01.mp3 |
+  | track_03.mp3 |
+  | track_04.mp3 |
+
 Then I should see a link that points to [value of the "href" attribute]
   Ex: Then I should see a link that points to "http://example.com"
   

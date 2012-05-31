@@ -1,13 +1,16 @@
 require 'uri'
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
 
-
 Given /^pending$/ do
   # Essentially allows marking an entire scenario as "pending", as opposed to just a single step
   # Useful when you have multiple tests failing, and you want to filter out a few, but still see
   # "Pending" in the cucumber results
   # Ref.: http://stackoverflow.com/questions/3064078/how-do-you-mark-a-cucumber-scenario-as-pending
   pending
+end
+
+Then /^debug$/ do
+  debugger
 end
 
 When /^(?:|I )fill in "([^\"]*)" with "([^\"]*)"$/ do |field, value|
@@ -45,6 +48,16 @@ end
 Then /^I should see all of the HTML5 audio sources:?$/ do |table|
   table.raw.each do |text|
     step "I should see the HTML5 audio source \"#{text[0]}\""
+  end
+end
+
+Then /^I should see the HTML5 video source "([^"]*)"$/ do |video_name|
+  page.should have_xpath("//video[contains(@src, \"#{video_name}\")] | //video/source[contains(@src, \"#{video_name}\")]")
+end
+
+Then /^I should see all of the HTML5 video sources:$/ do |table|
+  table.raw.each do |text|
+    step "I should see the HTML5 video source \"#{text[0]}\""
   end
 end
 
@@ -87,8 +100,4 @@ end
 
 When /^I accept the confirmation dialog box$/ do
   page.driver.browser.switch_to.alert.accept
-end
-
-Then /^debug$/ do
-  debugger
 end

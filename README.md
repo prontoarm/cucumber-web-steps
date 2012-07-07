@@ -38,8 +38,12 @@ Then I should see all of the HTML5 audio sources:
 
 Then I should see a link that points to [value of the "href" attribute]
   Ex: Then I should see a link that points to "http://example.com"
-  
-Then I should see a [tag] with [attribute name] of [attribute value]
+
+Then I should see a [tag name] tag around the text [some text]
+Ex: Then I should see a "code" tag around the text "printf 'Hello, world!';"
+Ex: Then I should see a "p" tag around the text "What a lovely bunch of coconuts!"
+
+Then I should see a [tag name] with [attribute name] of [attribute value]
 Ex: Then I should see a "div" with "id" of "content-container"
 </pre>
 

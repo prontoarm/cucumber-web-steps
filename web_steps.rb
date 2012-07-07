@@ -65,8 +65,12 @@ Then /^I should see a link that points to "([^"]*)"$/ do |href_destination|
   page.should have_xpath("//a[@href='#{href_destination}']")
 end
 
-Then /^I should see a "([^"]*)" with "([^"]*)" of "([^"]*)"$/ do |tag_name, attribute_name, div_id|
-  page.should have_xpath("//#{tag_name}[@#{attribute_name}=\"#{div_id}\"]")
+Then /^I should see a "([^"]*)" tag around the text "([^"]*)"$/ do |tag_name, text|
+  page.should have_xpath("//#{tag_name}[text()=\"#{text}\"]")
+end
+
+Then /^I should see a "([^"]*)" with "([^"]*)" of "([^"]*)"$/ do |tag_name, attribute_name, attribute_value|
+  page.should have_xpath("//#{tag_name}[@#{attribute_name}=\"#{attribute_value}\"]")
 end
 
 When /^(?:|I )follow "([^\"]*)"$/ do |link|

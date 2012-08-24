@@ -61,15 +61,15 @@ Then /^I should see all of the HTML5 video sources:$/ do |table|
   end
 end
 
-Then /^I should see a link that points to "([^"]*)"$/ do |href_destination|
+Then /^I should see an? link that points to "([^"]*)"$/ do |href_destination|
   page.should have_xpath("//a[@href='#{href_destination}']")
 end
 
-Then /^I should see a "([^"]*)" tag around the text "([^"]*)"$/ do |tag_name, text|
+Then /^I should see an? "([^"]*)" tag around the text "([^"]*)"$/ do |tag_name, text|
   page.should have_xpath("//#{tag_name}[text()=\"#{text}\"]")
 end
 
-Then /^I should see a "([^"]*)" with "([^"]*)" of "([^"]*)"$/ do |tag_name, attribute_name, attribute_value|
+Then /^I should see an? "([^"]*)" with "([^"]*)" of "([^"]*)"$/ do |tag_name, attribute_name, attribute_value|
   page.should have_xpath("//#{tag_name}[@#{attribute_name}=\"#{attribute_value}\"]")
 end
 

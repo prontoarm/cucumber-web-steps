@@ -8,6 +8,9 @@ Fill out forms
 <pre>
 When I fill in [field name] with [value]
   Ex: When I fill in "username" with "johndoe"
+When I attach the file [path/to/file] to form field [field name]
+  Fills in a "file" form field with the path to a file in the local file system. Useful for testing file upload forms.
+  Ex: When I attach the file "features/sample_uploads/profile_image.jpg" to form field "profile[image]"
 </pre>
 
 Test content
@@ -59,14 +62,6 @@ When I accept the confirmation dialog box
   Especially useful when you're testing javascript, or other actions that generate dialog boxes for your users, this step will switch to the dialog box, and click the accept option.
 When I select [some value] from [a_drop_down_element]
   Selects the option "Some value" from the drop-down input with name attribute "a_drop_down_element"
-</pre>
-
-File field (upload) support in forms
-------------------------------------
-
-<pre>
-When I attach the file [path/to/file] to form field [field name]
-  Fills in a "file" form field with the path to a file in the local file system. Useful for testing file upload forms.
 </pre>
 
 Test navigation

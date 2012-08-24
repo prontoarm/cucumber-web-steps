@@ -64,8 +64,10 @@ When I select [some value] from [a_drop_down_element]
 File field (upload) support in forms
 ------------------------------------
 
+<pre>
 When I attach the file [path/to/file] to form field [field name]
   Fills in a "file" form field with the path to a file in the local file system. Useful for testing file upload forms.
+</pre>
 
 Test navigation
 ---------------

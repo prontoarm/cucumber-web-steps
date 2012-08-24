@@ -98,6 +98,10 @@ When /^(?:|I )press "([^\"]*)"$/ do |button|
   click_button(button)
 end
 
+When /^I select "([^\"]*)" from "([^\"]*)"$/ do |value, dropdown|
+  select(value, from: dropdown) 
+end
+
 When /^I wait (\d+) seconds?$/ do |length_of_pause|
   sleep(length_of_pause.to_i)
 end

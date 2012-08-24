@@ -41,6 +41,10 @@ Then /^I should see all of the images:?$/ do |table|
   end
 end
 
+Then /^I attach the file "([^"]*)" to form field "([^"]*)"$/ do |filename, field_name|
+  attach_file(field_name, File.join(Rails.root, filename))
+end
+
 Then /^I should see the HTML5 audio source "([^"]*)"$/ do |audio_name|
   page.should have_xpath("//audio[contains(@src, \"#{audio_name}\")] | //audio/source[contains(@src, \"#{audio_name}\")]")
 end

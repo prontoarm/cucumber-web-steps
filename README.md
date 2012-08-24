@@ -61,6 +61,12 @@ When I select [some value] from [a_drop_down_element]
   Selects the option "Some value" from the drop-down input with name attribute "a_drop_down_element"
 </pre>
 
+File field (upload) support in forms
+------------------------------------
+
+When I attach the file [path/to/file] to form field [field name]
+  Fills in a "file" form field with the path to a file in the local file system. Useful for testing file upload forms.
+
 Test navigation
 ---------------
 

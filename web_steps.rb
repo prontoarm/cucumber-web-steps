@@ -17,8 +17,8 @@ When /^(?:|I )fill in "([^\"]*)" with "([^\"]*)"$/ do |field, value|
   fill_in(field, :with => value)
 end
 
-When /^I select "(.*)" from "(.*)"$/ do |value, field_name|
-  select(value, :from => field_name) 
+When /^I select "([^\"]*)" from "([^\"]*)"$/ do |value, dropdown|
+  select(value, from: dropdown) 
 end
 
 Then /^I should see the text "([^"]*)"$/ do |text|
@@ -104,10 +104,6 @@ end
 
 When /^(?:|I )press "([^\"]*)"$/ do |button|
   click_button(button)
-end
-
-When /^I select "([^\"]*)" from "([^\"]*)"$/ do |value, dropdown|
-  select(value, from: dropdown) 
 end
 
 When /^I wait (\d+) seconds?$/ do |length_of_pause|

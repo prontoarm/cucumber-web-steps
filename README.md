@@ -52,8 +52,8 @@ Then I should see a [tag name] with [attribute name] of [attribute value]
 Ex: Then I should see a "div" with "id" of "content-container"
 </pre>
 
-Test links, buttons, dialog boxes, drop-downs
----------------------------------------------
+Test links, buttons, dialog boxes
+---------------------------------
 
 <pre>
 When I follow [link]
@@ -62,8 +62,6 @@ When I press [button name]
   The "button name" is the text, id, or name of any button on the page. This is the standard step.
 When I accept the confirmation dialog box
   Especially useful when you're testing javascript, or other actions that generate dialog boxes for your users, this step will switch to the dialog box, and click the accept option.
-When I select [some value] from [a_drop_down_element]
-  Selects the option "Some value" from the drop-down input with name attribute "a_drop_down_element"
 </pre>
 
 Test navigation

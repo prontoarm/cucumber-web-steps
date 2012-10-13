@@ -8,6 +8,8 @@ Fill out forms
 <pre>
 When I fill in [field name] with [value]
   Ex: When I fill in "username" with "johndoe"
+When I select [value] from [field_name]
+  Ex: When I select "Yes!" from "options_dropdown[yes_or_no]"
 When I attach the file [path/to/file] to form field [field name]
   Fills in a "file" form field with the path to a file in the local file system. Useful for testing file upload forms.
   Ex: When I attach the file "features/sample_uploads/profile_image.jpg" to form field "profile[image]"

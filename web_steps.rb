@@ -17,6 +17,10 @@ When /^(?:|I )fill in "([^\"]*)" with "([^\"]*)"$/ do |field, value|
   fill_in(field, :with => value)
 end
 
+When /^I select "(.*)" from "(.*)"$/ do |value, field_name|
+  select(value, :from => field_name) 
+end
+
 Then /^I should see the text "([^"]*)"$/ do |text|
   page.should have_content(text)
 end
